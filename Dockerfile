@@ -8,4 +8,4 @@ ENV N8N_BASIC_AUTH_PASSWORD=changethispassword
 
 EXPOSE 10000
 
-CMD ["n8n", "start"]
+ENTRYPOINT ["n8n", "start"]
