@@ -1,0 +1,11 @@
+FROM n8nio/n8n:latest
+
+ENV N8N_PORT=10000
+ENV N8N_PROTOCOL=https
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=admin
+ENV N8N_BASIC_AUTH_PASSWORD=changethispassword
+
+EXPOSE 10000
+
+CMD ["n8n", "start"]
