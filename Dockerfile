@@ -1,10 +1,10 @@
-FROM n8nio/n8n:latest
+# Pinned to the version that has been running since the 2026-03-20 deploy.
+# Bump deliberately, one release line at a time, with a siv-n8n-db backup first:
+# n8n migrates the database forward on boot and cannot migrate it back.
+FROM n8nio/n8n:2.12.3
 
 ENV N8N_PORT=10000
 ENV N8N_PROTOCOL=https
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=admin
-ENV N8N_BASIC_AUTH_PASSWORD=changethispassword
 
 EXPOSE 10000
 
